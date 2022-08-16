@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from model_inference import inference
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     abstract = request.form['abstract']
-    CPC_code = 'A12'
+    CPC_code = inference(abstract)
 
     return render_template('cpc_pred.html', CPC_code=CPC_code)
 
