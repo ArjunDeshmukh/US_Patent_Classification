@@ -88,7 +88,14 @@ class PatentClassificationModel(torch.nn.Module):
         return outputs
 
 
-def inference(title, cpc_code_section_dict):
+def inference(title):
+
+    cpc_codes_upto_subclass_df = pd.read_csv(CFG.CPC_CODES_PATH)
+    sections = pd.unique(cpc_codes_upto_subclass_df['section'])
+    cpc_code_section_dict = dict(zip(range(len(sections)), sections))
+
+    CFG.NUM_CLASSES = len(sections)
+
     tokenizer = AutoTokenizer.from_pretrained(CFG.BERT_FOR_PATENTS_PATH)
 
     title_input = tokenizer(title, truncation=True, add_special_tokens=True, max_length=CFG.MAX_TOKEN_LEN,
@@ -120,14 +127,8 @@ def inference(title, cpc_code_section_dict):
 
 
 if __name__ == '__main__':
-    cpc_codes_upto_subclass_df = pd.read_csv(CFG.CPC_CODES_PATH)
-    sections = pd.unique(cpc_codes_upto_subclass_df['section'])
-    # cpc_code_section_dict = dict(zip(sections, range(len(sections))))
-    cpc_code_section_dict = dict(zip(range(len(sections)), sections))
-
-    CFG.NUM_CLASSES = len(sections)
 
     Title = "Lasers with InGaAs quantum wells with InGaP barrier layers with reduced decomposition"
 
-    cpc_sections = inference(Title, cpc_code_section_dict)
+    cpc_sections = inference(Title)
     print(cpc_sections)
