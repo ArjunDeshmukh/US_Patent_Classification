@@ -18,7 +18,7 @@ cd ..
 ```
 This wil download the trained model from kaggle public dataset: https://www.kaggle.com/datasets/arjunrdeshmukh/patclassmodels-cpu
 
-### Running the application locally
+## Running the application locally
 You can run this application in your PC with the following commands:
 ````
 py -m venv env
