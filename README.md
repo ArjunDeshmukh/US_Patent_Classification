@@ -28,7 +28,7 @@ flask_app.py
 ````
 
 After running, flask_app.py you will get an output containing a line as follows:
-* Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 
 Copy this URL from your command window and paste in your browser and press enter. This will show you a window where you can enter a patent abstract.
 For more details about this project, you can read these blogs I wrote: 
