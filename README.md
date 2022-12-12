@@ -32,7 +32,6 @@ Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 
 Copy this URL from your command window and paste in your browser and press enter. This will show you a window where you can enter a patent abstract.
 For more details about this project, you can read these blogs I wrote: 
-
-
-
-
+Part 1: https://medium.com/@darjun94/us-patent-classification-end-to-end-nlp-project-part-1-51604a754bbe
+Part 2: https://medium.com/@darjun94/us-patent-classification-end-to-end-nlp-project-part-2-d6538149f353
+Part 3: https://medium.com/@darjun94/us-patent-classification-end-to-end-nlp-project-part-3-a8a6549881a9
