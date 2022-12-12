@@ -43,7 +43,7 @@ class CFG:
     N_PROCS = 1
     START_EPOCH = 2  # 0 indexed, starts from 0
     BEST_LOSS = 0.223360  # using 1e6 if no training has been done
-    OUTPUT_TRUE_THRESH = 0.5
+    OUTPUT_TRUE_THRESH = 0.3
 
 # Parameters which will be added in subsequent code:
 # NUM_CLASSES, TRAIN_NUM_PATENTS

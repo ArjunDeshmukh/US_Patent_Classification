@@ -13,10 +13,7 @@ def home():
 def predict():
     abstract = request.form['abstract']
     CPC_code = inference(abstract)
-    #title = request.form['title']
-    #CPC_code = inference(title)
 
-    # return render_template('cpc_subclass_pred.html', CPC_code=CPC_code)
     return render_template('cpc_section_pred.html', CPC_code=CPC_code)
 
 
